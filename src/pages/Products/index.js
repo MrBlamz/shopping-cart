@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './styles';
-import Product from './Product/index';
+import Product from '../../components/Product/index';
 
 function Products({ list, onClick }) {
   const products = list.map((product) => (
