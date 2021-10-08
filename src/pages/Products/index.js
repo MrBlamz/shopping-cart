@@ -6,6 +6,7 @@ function Products({ list, onClick }) {
   const products = list.map((product) => (
     <Product
       key={product.id}
+      id={product.id}
       imgUrl={product.image}
       name={product.title}
       price={product.price + '€'}

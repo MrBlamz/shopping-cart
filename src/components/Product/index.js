@@ -10,7 +10,7 @@ import {
   AddButton,
 } from './styles';
 
-function Product({ name, imgUrl, price, addToCart }) {
+function Product({ name, imgUrl, price, addToCart, id }) {
   return (
     <Container>
       <ImageContainer>
@@ -20,7 +20,7 @@ function Product({ name, imgUrl, price, addToCart }) {
       <InfoContainer>
         <Name>{name}</Name>
         <Price>{price}</Price>
-        <AddButton onClick={addToCart}>Add to Cart</AddButton>
+        <AddButton onClick={() => addToCart(id)}>Add to Cart</AddButton>
       </InfoContainer>
     </Container>
   );

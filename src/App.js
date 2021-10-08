@@ -8,8 +8,15 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  function addProductToCart({ name, id, price, quantity }) {
-    setCart([...cart, '']);
+  function addProductToCart(id) {
+    const product = products.find((item) => item.id === id);
+
+    if (cart.includes(product)) {
+      product.quantity += 1;
+    } else {
+      product.quantity = 1;
+      setCart([...cart, product]);
+    }
   }
 
   function fetchProducts() {
