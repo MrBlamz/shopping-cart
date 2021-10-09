@@ -1,6 +1,6 @@
 import React from 'react';
 import { LinkWrapper, NavLink, Logo, Nav } from './styles';
-import CartButton from './CartButton';
+import CartButton from '../CartButton';
 
 const Navbar = ({ logoText, itemNumber }) => (
   <Nav>
