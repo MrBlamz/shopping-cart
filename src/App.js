@@ -27,6 +27,11 @@ function App() {
     setCart([...cart]);
   }
 
+  function removeItemFromCart(id) {
+    const newCart = cart.filter((item) => item.id !== id);
+    setCart(newCart);
+  }
+
   function fetchProducts() {
     const data = [];
 
@@ -57,7 +62,11 @@ function App() {
             <Products list={products} onClick={addProductToCart} />
           </Route>
           <Route exact path='/cart'>
-            <Cart items={cart} changeProductQuantity={changeProductQuantity} />
+            <Cart
+              items={cart}
+              changeProductQuantity={changeProductQuantity}
+              removeItemFromCart={removeItemFromCart}
+            />
           </Route>
         </Switch>
       </BrowserRouter>

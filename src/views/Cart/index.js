@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Title, Grid, Total } from './styles';
 import CartItem from '../../components/CartItem';
 
-function Cart({ items, changeProductQuantity }) {
+function Cart({ items, changeProductQuantity, removeItemFromCart }) {
   const total = items.reduce(
     (previous, current) => previous + current.price * current.quantity,
     0
@@ -17,6 +17,7 @@ function Cart({ items, changeProductQuantity }) {
       price={product.price}
       quantity={product.quantity}
       changeProductQuantity={changeProductQuantity}
+      removeItemFromCart={removeItemFromCart}
     />
   ));
 

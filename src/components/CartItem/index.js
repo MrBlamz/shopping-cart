@@ -10,7 +10,15 @@ import {
   QuantityChangerButton,
 } from './styles';
 
-function CartItem({ image, name, quantity, price, id, changeProductQuantity }) {
+function CartItem({
+  image,
+  name,
+  quantity,
+  price,
+  id,
+  changeProductQuantity,
+  removeItemFromCart,
+}) {
   const totalPrice = (price * quantity).toFixed(2);
 
   return (
@@ -29,7 +37,7 @@ function CartItem({ image, name, quantity, price, id, changeProductQuantity }) {
           +
         </QuantityChangerButton>
       </QuantityContainer>
-      <DeleteButton>Remove</DeleteButton>
+      <DeleteButton onClick={() => removeItemFromCart(id)}>Remove</DeleteButton>
     </Container>
   );
 }
