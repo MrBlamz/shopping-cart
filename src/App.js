@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/index';
 import Products from './views/Products/index';
+import Cart from './views/Cart/index';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -47,6 +48,9 @@ function App() {
         <Switch>
           <Route exact path='/products'>
             <Products list={products} onClick={addProductToCart} />
+          </Route>
+          <Route exact path='/cart'>
+            <Cart items={cart} />
           </Route>
         </Switch>
       </BrowserRouter>
