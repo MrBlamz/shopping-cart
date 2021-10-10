@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/index';
-import Products from './pages/Products/index';
+import Products from './views/Products/index';
 
 function App() {
   const [products, setProducts] = useState([]);
