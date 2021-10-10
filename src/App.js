@@ -20,6 +20,13 @@ function App() {
     }
   }
 
+  function changeProductQuantity(amount, id) {
+    const product = cart.find((item) => item.id === id);
+    if (product.quantity + amount < 1) return;
+    product.quantity = product.quantity + amount;
+    setCart([...cart]);
+  }
+
   function fetchProducts() {
     const data = [];
 
@@ -50,7 +57,7 @@ function App() {
             <Products list={products} onClick={addProductToCart} />
           </Route>
           <Route exact path='/cart'>
-            <Cart items={cart} />
+            <Cart items={cart} changeProductQuantity={changeProductQuantity} />
           </Route>
         </Switch>
       </BrowserRouter>
