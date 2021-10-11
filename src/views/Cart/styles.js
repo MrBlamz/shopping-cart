@@ -4,20 +4,43 @@ export const Container = styled.div`
   margin: 1.5rem 10rem;
 `;
 
-export const Title = styled.h2`
+export const Heading = styled.h2`
   text-align: center;
   font-size: 2.3rem;
   margin-bottom: 1.5rem;
+`;
+export const EmptyCartHeadingContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+`;
+
+export const EmptyCartHeading = styled.h2`
+  font-size: 5rem;
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
+  overflow-y: auto;
 `;
 
 export const Total = styled.h2`
   text-align: center;
   font-size: 2.3rem;
   margin-top: 1rem;
+`;
+
+export const WaveContainer = styled.div`
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;

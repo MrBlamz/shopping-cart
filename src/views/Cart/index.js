@@ -1,6 +1,15 @@
 import React, { Fragment } from 'react';
-import { Container, Title, Grid, Total } from './styles';
+import {
+  Container,
+  Heading,
+  EmptyCartHeadingContainer,
+  EmptyCartHeading,
+  Grid,
+  Total,
+  WaveContainer,
+} from './styles';
 import CartItem from '../../components/CartItem';
+import Wave from '../../components/Wave/index';
 
 function Cart({ items, changeProductQuantity, removeItemFromCart }) {
   const total = items.reduce(
@@ -25,12 +34,19 @@ function Cart({ items, changeProductQuantity, removeItemFromCart }) {
     <Container>
       {cartItems.length ? (
         <Fragment>
-          <Title>Your Cart</Title>
+          <Heading>Your Cart</Heading>
           <Grid>{cartItems}</Grid>
           <Total>{`Total: ${total.toFixed(2)}€`}</Total>
         </Fragment>
       ) : (
-        <Title>Your cart is empty</Title>
+        <Fragment>
+          <EmptyCartHeadingContainer>
+            <EmptyCartHeading>Your cart is empty</EmptyCartHeading>
+          </EmptyCartHeadingContainer>
+          <WaveContainer>
+            <Wave />
+          </WaveContainer>
+        </Fragment>
       )}
     </Container>
   );
