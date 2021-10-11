@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
   padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  pointer-events: none;
 `;
 
 export const Title = styled.h2`
@@ -24,6 +31,7 @@ export const Button = styled.button`
   align-items: center;
   border-radius: 12px;
   margin-top: 3rem;
+  pointer-events: all;
 `;
 
 export const WaveContainer = styled.div`
