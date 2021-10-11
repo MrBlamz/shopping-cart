@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Container, Title, Grid, Total } from './styles';
 import CartItem from '../../components/CartItem';
 
@@ -23,9 +23,15 @@ function Cart({ items, changeProductQuantity, removeItemFromCart }) {
 
   return (
     <Container>
-      <Title>Your Cart</Title>
-      <Grid>{cartItems}</Grid>
-      <Total>{`Total: ${total.toFixed(2)}€`}</Total>
+      {cartItems.length ? (
+        <Fragment>
+          <Title>Your Cart</Title>
+          <Grid>{cartItems}</Grid>
+          <Total>{`Total: ${total.toFixed(2)}€`}</Total>
+        </Fragment>
+      ) : (
+        <Title>Your cart is empty</Title>
+      )}
     </Container>
   );
 }
