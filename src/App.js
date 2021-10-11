@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/index';
 import Spinner from './components/Spinner';
+import Home from './views/Home/index';
 import Products from './views/Products/index';
 import Cart from './views/Cart/index';
 
@@ -60,6 +61,9 @@ function App() {
       <BrowserRouter>
         <Navbar logoText='Fake Store' itemNumber={cart.length} />
         <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
           <Route exact path='/products'>
             {isLoading ? (
               <Spinner />
