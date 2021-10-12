@@ -6,7 +6,7 @@ const CartButton = ({ itemNumber }) => {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/cart');
+    history.push('/shopping-cart/cart');
   }
 
   return (

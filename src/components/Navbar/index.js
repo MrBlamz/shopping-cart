@@ -30,8 +30,8 @@ const Navbar = ({ logoText, itemNumber }) => {
         ) : (
           <Fragment>
             <LinkWrapper>
-              <NavLink to='/'>Home</NavLink>
-              <NavLink to='/products'>Products</NavLink>
+              <NavLink to='/shopping-cart'>Home</NavLink>
+              <NavLink to='/shopping-cart/products'>Products</NavLink>
             </LinkWrapper>
             <CartButton itemNumber={itemNumber} />
           </Fragment>
@@ -39,13 +39,13 @@ const Navbar = ({ logoText, itemNumber }) => {
       </Container>
       {mobileMenuIsOpen ? (
         <MobileMenu>
-          <NavLink onClick={handleClick} to='/'>
+          <NavLink onClick={handleClick} to='/shopping-cart'>
             Home
           </NavLink>
-          <NavLink onClick={handleClick} to='/products'>
+          <NavLink onClick={handleClick} to='/shopping-cart/products'>
             Products
           </NavLink>
-          <NavLink onClick={handleClick} to='/cart'>
+          <NavLink onClick={handleClick} to='/shopping-cart/cart'>
             Cart
           </NavLink>
         </MobileMenu>

@@ -61,17 +61,17 @@ function App() {
       <BrowserRouter>
         <Navbar logoText='Fake Store' itemNumber={cart.length} />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/shopping-cart'>
             <Home />
           </Route>
-          <Route exact path='/products'>
+          <Route exact path='/shopping-cart/products'>
             {isLoading ? (
               <Spinner />
             ) : (
               <Products list={products} onClick={addProductToCart} />
             )}
           </Route>
-          <Route exact path='/cart'>
+          <Route exact path='/shopping-cart/cart'>
             <Cart
               items={cart}
               changeProductQuantity={changeProductQuantity}
