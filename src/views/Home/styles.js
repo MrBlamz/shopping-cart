@@ -12,10 +12,19 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   pointer-events: none;
+
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 5rem;
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+    text-align: center;
+  }
 `;
 
 export const Button = styled.button`
