@@ -22,7 +22,7 @@ const Navbar = ({ logoText, itemNumber }) => {
   return (
     <NavBar>
       <Container>
-        <Logo to='/'>{logoText}</Logo>
+        <Logo to='/shopping-cart'>{logoText}</Logo>
         {isMobile ? (
           <MenuButton onClick={handleClick}>
             <MenuIcon />

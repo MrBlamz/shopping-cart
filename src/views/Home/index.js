@@ -7,7 +7,7 @@ function Home() {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/products');
+    history.push('/shopping-cart/products');
   }
 
   return (
